@@ -1,1 +1,26 @@
 // Mixins in here
+
+.flexDisplay(@justify, @align) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+// Why doesn't this work?
+// .smu-btn(30px,2px) {
+//     background: @button-bg;
+//     padding: @padding;
+//     border-radius: @border-radius;
+// }
+
+.smu-btn() {
+    background: @button-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: @main-bg;
+    padding: 1rem 1.5rem;
+    width: 85%;
+    border-radius: 10px;
+    font-size: 1.8rem;
+}

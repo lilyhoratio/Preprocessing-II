@@ -1,12 +1,20 @@
 .home {
 
+  .content-header {
+
+    border-bottom: 2px dashed @navigation-border;
+
+    .header-img-content {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
     
     .text-content {
       width: 48%;
@@ -56,6 +64,10 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        .smu-btn();
+      }
     }
   }
 }// home
