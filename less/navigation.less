@@ -2,20 +2,34 @@
 
 header {
     border-bottom: 2px dashed @navigation-border;
-
-    .home {
+    
+    //navigation
+    .navtext {
+        
+        max-width: 800px;
         .flexDisplay(space-between, center);
         margin: 20px auto;
-    }
-    
-    nav {
-        
-        .flexDisplay(space-around, center);
-        a {
-            text-decoration: none;
-            margin-left: 3rem;
-            color: black;
-            font-size: 1.6rem;
+
+        @media @mobile {
+            flex-wrap: wrap;
+            margin: 10px 0 5px 0;
+            .flexDisplay(center, center);
+
+            h1 {
+                width: 100%;
+                text-align: center;
+            }
         }
-    }
+        // links
+        nav { 
+            .flexDisplay(space-around, center);
+
+            a {
+                text-decoration: none;
+                margin-left: 3rem;
+                color: black;
+                font-size: 1.6rem;
+            }
+        }
+    } // navigation has max-width container of 800px for desktop
 }
