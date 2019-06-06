@@ -176,20 +176,8 @@ header .navtext {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin: 20px auto;
-}
-@media (max-width: 500px) {
-  header .navtext {
-    flex-wrap: wrap;
-    margin: 10px 0 5px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  header .navtext h1 {
-    width: 100%;
-    text-align: center;
-  }
 }
 header .navtext nav {
   display: flex;
@@ -198,9 +186,26 @@ header .navtext nav {
 }
 header .navtext nav a {
   text-decoration: none;
-  margin-left: 3rem;
+  margin-left: 4rem;
   color: black;
   font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  header {
+    margin: 10px 0 5px 0;
+    justify-content: center;
+    align-items: center;
+  }
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+  header nav {
+    justify-content: space-between;
+  }
+  header nav a {
+    margin: 0;
+  }
 }
 .footer {
   width: 100%;
@@ -239,7 +244,7 @@ header .navtext nav a {
 }
 @media (max-width: 500px) {
   .home .content-section {
-    flex-direction: column;
+    justify-content: center;
   }
   .home .content-section .text-content {
     width: 100%;
@@ -294,12 +299,11 @@ header .navtext nav a {
 }
 @media (max-width: 500px) {
   .home .content-pick {
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .home .content-pick .destination {
-    width: 100%;
+    width: 90%;
   }
   .home .content-pick .btn {
     background: #17A2B8;

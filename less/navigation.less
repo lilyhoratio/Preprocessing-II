@@ -3,33 +3,51 @@
 header {
     border-bottom: 2px dashed @navigation-border;
     
-    //navigation
-    .navtext {
-        
+    .navtext { // includes header and nav
         max-width: 800px;
         .flexDisplay(space-between, center);
+        flex-wrap: wrap;
         margin: 20px auto;
 
-        @media @mobile {
-            flex-wrap: wrap;
-            margin: 10px 0 5px 0;
-            .flexDisplay(center, center);
-
-            h1 {
-                width: 100%;
-                text-align: center;
-            }
-        }
-        // links
         nav { 
             .flexDisplay(space-around, center);
-
+    
             a {
                 text-decoration: none;
-                margin-left: 3rem;
+                margin-left: 4rem;
                 color: black;
                 font-size: 1.6rem;
             }
         }
-    } // navigation has max-width container of 800px for desktop
-}
+    }
+
+    // // nav links
+    // nav { 
+    //     .flexDisplay(space-around, center);
+
+    //     a {
+    //         text-decoration: none;
+    //         margin-left: 4rem;
+    //         color: black;
+    //         font-size: 1.6rem;
+    //     }
+    // }
+
+    @media @mobile {
+        margin: 10px 0 5px 0;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        nav {
+            justify-content: space-between;
+            a {
+                margin: 0;
+            }
+        }
+    }
+} 

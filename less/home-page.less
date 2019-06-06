@@ -31,7 +31,8 @@
     }
 
     @media @mobile {
-      flex-direction: column;
+      // flex-direction: column;
+      justify-content: center;
 
       .text-content {
         width: 100%;
@@ -78,7 +79,6 @@
     display: flex;
     justify-content: space-between;
 
-
     .destination {
       width: 30%;
       margin-bottom: 30px;
@@ -89,12 +89,13 @@
     }
 
     @media @mobile {
-      flex-wrap: nowrap;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
+      // flex-direction: column;
+      // align-items: center;
+      justify-content: center;
 
       .destination {
-        width: 100%;
+        width: 90%;
       }
 
       .btn {
