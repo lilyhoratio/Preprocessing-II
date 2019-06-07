@@ -279,13 +279,25 @@ header .navtext nav a {
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+  padding-left: 10px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination p {
+    padding-right: 35px;
+  }
 }
 .home .content-pick .destination .btn {
-  padding: 40px;
+  padding: 8px 0px;
   border-radius: 10px;
   background: #17A2B8;
   display: flex;
@@ -297,7 +309,7 @@ header .navtext nav a {
 }
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {
-    width: 95%;
+    width: 90%;
   }
 }
 @media (max-width: 500px) {

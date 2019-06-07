@@ -6,11 +6,8 @@
     align-items: @align;
 }
 
-
-// Why doesn't this work?
-
-.smu-btn(@padding, @br) {
-    padding: @padding;
+.smu-btn(@padding-tb, @padding-lr, @br) {
+    padding: @padding-tb @padding-lr;
     border-radius: @br;
     background: @button-bg;
 

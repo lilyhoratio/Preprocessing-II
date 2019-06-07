@@ -78,17 +78,28 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      padding-left: 10px;
+
+      @media @mobile {
+        margin-left: 30px;
+      }
+
+      p {
+        @media @mobile {
+          padding-right: 35px;
+        }
+      }
 
       .btn {
-        // .smu-btn;
-        .smu-btn(40px, 10px);
+        .smu-btn(8px, 0px, 10px);
         
         @media @mobile {
-          width: 95%;
+          width: 90%;
         }
       }
     }
