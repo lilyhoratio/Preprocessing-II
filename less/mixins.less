@@ -1,1 +1,20 @@
 // Mixins in here
+
+.flexDisplay(@justify, @align) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.smu-btn(@padding-tb, @padding-lr, @br) {
+    padding: @padding-tb @padding-lr;
+    border-radius: @br;
+    background: @button-bg;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: @main-bg;
+    width: 85%;
+    font-size: 1.8rem;
+}
