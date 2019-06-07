@@ -48,7 +48,7 @@
     }
   }
 
-  .inverse-content {
+  .inverse-content { //This section inherits flex from content-section above, correct? 
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
@@ -84,23 +84,23 @@
       margin-bottom: 30px;
 
       .btn {
-        .smu-btn();
+        // .smu-btn;
+        .smu-btn(40px, 10px);
+        
+        @media @mobile {
+          width: 95%;
+        }
       }
     }
 
+    // MOBILE STYLE FOR THREE BOXES
+
     @media @mobile {
-      flex-wrap: wrap;
-      // flex-direction: column;
-      // align-items: center;
-      justify-content: center;
+      .flexDisplay(center, center);
+      flex-direction: column;
 
       .destination {
         width: 90%;
-      }
-
-      .btn {
-        .smu-btn();
-        width: 100%;
       }
     }
   }

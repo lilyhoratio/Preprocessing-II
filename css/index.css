@@ -176,12 +176,12 @@ header .navtext {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  width: 100%;
   margin: 20px auto;
 }
 header .navtext nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 header .navtext nav a {
@@ -191,20 +191,18 @@ header .navtext nav a {
   font-size: 1.6rem;
 }
 @media (max-width: 500px) {
-  header {
+  header .navtext {
     margin: 10px 0 5px 0;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
   }
-  header h1 {
-    width: 100%;
+  header .navtext h1 {
     text-align: center;
   }
-  header nav {
-    justify-content: space-between;
+  header .navtext nav {
+    width: 100%;
   }
-  header nav a {
-    margin: 0;
+  header .navtext nav a {
+    margin-left: 0;
   }
 }
 .footer {
@@ -287,34 +285,29 @@ header .navtext nav a {
   margin-bottom: 30px;
 }
 .home .content-pick .destination .btn {
+  padding: 40px;
+  border-radius: 10px;
   background: #17A2B8;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #FFFFFF;
-  padding: 1rem 1.5rem;
   width: 85%;
-  border-radius: 10px;
   font-size: 1.8rem;
 }
 @media (max-width: 500px) {
+  .home .content-pick .destination .btn {
+    width: 95%;
+  }
+}
+@media (max-width: 500px) {
   .home .content-pick {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .home .content-pick .destination {
-    width: 90%;
-  }
-  .home .content-pick .btn {
-    background: #17A2B8;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
-    padding: 1rem 1.5rem;
-    width: 85%;
-    border-radius: 10px;
-    font-size: 1.8rem;
-    width: 100%;
+    flex-direction: column;
+  }
+  .home .content-pick .destination {
+    width: 90%;
   }
 }

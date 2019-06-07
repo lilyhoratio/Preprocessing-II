@@ -3,14 +3,15 @@
 header {
     border-bottom: 2px dashed @navigation-border;
     
-    .navtext { // includes header and nav
+    .navtext { 
+
         max-width: 800px;
         .flexDisplay(space-between, center);
-        flex-wrap: wrap;
+        width: 100%; // so everything will stretch to 100% for items inside of it;
         margin: 20px auto;
 
         nav { 
-            .flexDisplay(space-around, center);
+            .flexDisplay(space-between, center);
     
             a {
                 text-decoration: none;
@@ -19,34 +20,21 @@ header {
                 font-size: 1.6rem;
             }
         }
-    }
 
-    // // nav links
-    // nav { 
-    //     .flexDisplay(space-around, center);
+        @media @mobile {
+            margin: 10px 0 5px 0;
+            flex-direction: column;
 
-    //     a {
-    //         text-decoration: none;
-    //         margin-left: 4rem;
-    //         color: black;
-    //         font-size: 1.6rem;
-    //     }
-    // }
+            h1 {
+                // width: 100%;
+                text-align: center;
+            }
 
-    @media @mobile {
-        margin: 10px 0 5px 0;
-        justify-content: center;
-        align-items: center;
-
-        h1 {
-            width: 100%;
-            text-align: center;
-        }
-
-        nav {
-            justify-content: space-between;
-            a {
-                margin: 0;
+            nav {
+                width: 100%;
+                a {
+                    margin-left: 0; 
+                }
             }
         }
     }
